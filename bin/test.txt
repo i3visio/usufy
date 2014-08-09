@@ -1,0 +1,2 @@
+Test1;"http://test1.com/" + self.NICK_WILDCARD
+Test2;"http://test2.com/" + self.NICK_WILDCARD

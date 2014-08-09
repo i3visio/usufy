@@ -1,0 +1,6 @@
+include *.txt
+recursive-include doc
+include README.md
+include MANIFEST
+recursive-include bin
+include COPYING
