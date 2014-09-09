@@ -1,0 +1,6 @@
+#Name of the file;Name of the platform;Tags;Usufy URL;notFoundText
+#
+# Example:
+#demo;Demo;"demo", "development";"http://demo.com/"  + self.NICK_WILDCARD;"<title>Platform</title>", "Error 404"
+#
+demo;Demo;"demo", "development";"http://demo.com/"  + self.NICK_WILDCARD;"<title>Platform</title>", "Error 404"
