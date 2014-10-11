@@ -30,7 +30,7 @@ import tkMessageBox as box
 from tkintertable.Tables import TableCanvas
 from tkintertable.TableModels import TableModel
 
-import utils.usufyparser as usufyparser
+import lib.usufyparser as usufyparser
 import usufy as usufy
 # logging imports
 import logging

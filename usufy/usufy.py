@@ -41,20 +41,19 @@ import time
 from multiprocessing import Process, Queue, Pool
 
 # configuration and utils
-import utils.config_usufy as config
-import utils.analyser as analyser
-#import utils.attributes as attributes
-import utils.benchmark as benchmark
-import utils.export as export_mod
-#import utils.profilesquatting as profilesquatting
-import utils.squaty as profilesquatting
-import utils.usufyparser as usufyparser
+import lib.config_usufy as config
+#import lib.attributes as attributes
+import lib.benchmark as benchmark
+import lib.export as export_mod
+#import lib.profilesquatting as profilesquatting
+import lib.squaty as profilesquatting
+import lib.usufyparser as usufyparser
 import g_usufy as usufygui 
-import utils.usufybrowser as usufybrowser
-import utils.general as general
+import lib.usufybrowser as usufybrowser
+import lib.general as general
 
 # logging imports
-import utils.logger
+import lib.logger
 import logging
 
 def fuzzUsufy(fDomains = None, fFuzzStruct = None):
@@ -266,10 +265,10 @@ def usufy_main(args):
 		Main function. This function is created in this way so as to let other applications make use of the full configuration capabilities of the application.	
 	'''
 	# Recovering the logger
-	logger = utils.logger.setupUsufyLogger(args.verbose)
+	logger = lib.logger.setupUsufyLogger(args.verbose)
 	# From now on, the logger can be recovered like this:
 	logger = logging.getLogger("usufy")
-	
+
 	logger.info("Starting usufy.py...")
 
 	if args.license:

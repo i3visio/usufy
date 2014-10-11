@@ -24,7 +24,7 @@ import logging
 import os
 
 from platforms import Platform
-import utils.general as general
+import lib.general as general
 
 import Skype4Py
 

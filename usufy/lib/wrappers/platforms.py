@@ -24,9 +24,9 @@ import os
 import random
 import re
 
-from utils.usufybrowser import UsufyBrowser
-from utils.credentials import Credential
-import utils.general as general
+from lib.usufybrowser import UsufyBrowser
+from lib.credentials import Credential
+import lib.general as general
 
 # logging imports
 import logging
