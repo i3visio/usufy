@@ -10,21 +10,8 @@ platforms when a user profile has not been found as the evidence of the existenc
 of a given profile. Its inheritance system has been designed to allow an easy development 
 of new wrappers while its multiprocessing conception shows the results fastly.
 
-Some of the 231 supported networks in v1.3.0 by 2014-10-11 are:
-adtriboo, badoo, bitbucket, bitcointalk, blip, burbuja, 
-care2, couchsurfing, dailymotion, delicious, douban, 
-ebay, elmundo, epinions, facebook, favstar, flickr, 
-forobtc, forocoches, fotolog, foursquare, freebase,
-garage4hackers, getsatisfaction, github, gitorious,
-googleplus, gsmspain, hellboundhackers, hi5, identica,
-instagram, issuu, karmacracy, kickstarter, klout,
-linkedin, marca, mediavida, myspace, occupywallst,
-pastebin, pearltrees, pinterest, pokerstrategy, qq,
-ratemypoo, rebelmouse, reddit, researchgate, scribd,
-skype, slideshare, sourceforge, storify, spoj, 
-theguardian, tradimo, tumblr, twicsy, twitpic, twitter, 
-unsystem, vk, xing, youtube
-
+The 230 supported networks in v1.3.0 by 2014-10-11 are:
+'500px', 'adtriboo', 'anarchy101', 'aporrealos', 'apsense', 'arduino', 'ariva', 'armorgames', 'artbreak', 'artician', 'arto', 'askfm', 'audiob', 'audioboo', 'authorstream', 'autospies', 'backyardchickens', 'badoo', 'behance', 'bennugd', 'bitbucket', 'bitcointalk', 'bitly', 'blackplanet', 'bladna', 'blip', 'blogspot', 'bookmarky', 'bookofmatches', 'boonex', 'bordom', 'boxedup', 'breakcom', 'bucketlistly', 'burbuja.info', 'burdastyle', 'buzznet', 'cafemom', 'carbonmade', 'cardomain', 'care2', 'castroller', 'causes', 'ccsinfo', 'chess', 'cockos', 'connectingsingles', 'couchsurfing', 'dailymail', 'dailymotion', 'deviantart', 'digitalspy', 'disqus', 'doodle', 'douban', 'dribbble', 'drugbuyersforum', 'drupal', 'ebay', 'echatta', 'elmundo', 'enfemenino', 'epinions', 'eqe', 'ethereum', 'etsy', 'evilzone', 'facebook', 'fanpop', 'fark', 'favstar', 'flickr', 'flixster', 'foodspotting', 'forobtc', 'forocoches', 'forosperu', 'foursquare', 'freebase', 'freerepublic', 'friendfeed', 'gametracker', 'gapyear', 'garage4hackers', 'gather', 'geeksphone', 'genspot', 'getsatisfaction', 'github', 'gitorious', 'gogobot', 'goodreads', 'googleplus', 'gsmspain', 'hellboundhackers', 'hi5', 'ibosocial', 'identica', 'imgur', 'instagram', 'instructables', 'interracialmatch', 'intersect', 'intfiction', 'islamicawakening', 'issuu', 'ixgames', 'jamiiforums', 'kaboodle', 'kali', 'karmacracy', 'kickstarter', 'kinja', 'klout', 'kongregate', 'kupika', 'lastfm', 'linkedin', 'livejournal', 'looki', 'marca', 'matchdoctor', 'mcneel', 'mediavida', 'medium', 'meneame', 'metacafe', 'migente', 'minecraft', 'musicasacra', 'myeloma', 'myspace', 'naver', 'netlog', 'netvibes', 'occupywallst', 'odnoklassniki', 'openframeworks', 'oroom', 'pastebin', 'pearltrees', 'peerbackers', 'photobucket', 'pinterest', 'pixinsight', 'pjrc', 'plancast', 'pokerred', 'pokerstrategy', 'pornhub', 'proboards', 'pz', 'qq', 'quartermoonsaloon', 'rankia', 'rapid', 'ratemypoo', 'rawtherapee', 'rebelmouse', 'redtube', 'relatious', 'researchgate', 'rojadirecta', 'ruby', 'scribd', 'sencha', 'skype', 'slashdot', 'slideshare', 'smartcitizen', 'sokule', 'soundcloud', 'sourceforge', 'spaniards', 'spoj', 'spotify', 'squidoo', 'steamcommunity', 'steinberg', 'streakgaming', 'stuff', 'stumbleupon', 'teamtreehouse', 'techcrunch', 'thecarcommunity', 'theguardian', 'thehoodup', 'thesims', 'thestudentroom', 'tradimo', 'travian', 'tripadvisor', 'tripit', 'trulia', 'tumblr', 'tuporno', 'tvtag', 'twicsy', 'twitch', 'twitpic', 'twitter', 'twoplustwo', 'ukdebate', 'ummahforum', 'unsystem', 'ustream', 'vexforum', 'videohelp', 'vimeo', 'virustotal', 'vk', 'wefollow', 'wikipedia', 'winamp', 'wishlistr', 'wordpress', 'wykop', 'xanga', 'xat', 'xing', 'xtube', 'youku', 'youtube', 'zabbix', 'zentyal'
 License: GPLv3
 ==============
 

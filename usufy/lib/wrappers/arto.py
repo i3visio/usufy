@@ -33,6 +33,6 @@ class Arto(Platform):
 		self.tags = ["image"]
 		self.NICK_WILDCARD = "<HERE_GOES_THE_NICK>"
 		self.url = "http://" + self.NICK_WILDCARD + ".arto.com"
-		self.notFoundText = [">Good  afternoon</span>"]
+		self.notFoundText = ["guest</span></span>"]
 		self.forbiddenList = []
 

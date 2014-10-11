@@ -37,6 +37,6 @@ class Peerbackers(Platform):
 		self.url = "http://peerbackers.com/members/" + self.NICK_WILDCARD
 		# Add the strings to look for when an error appears
 		#self.notFoundText = ["<title>about.me | your personal homepage</title><style>"]
-		self.notFoundText = ["<title>Peerbackers | crowdfunding big ideas</title>"]
+		self.notFoundText = ["<title>peerbackers - Your Path To Capital - Crowdfunding Consulting</title>"]
 		self.forbiddenList = ['.']
 		self.score = 10.0

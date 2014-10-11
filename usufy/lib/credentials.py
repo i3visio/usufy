@@ -19,23 +19,16 @@
 #
 ##################################################################################
 
-from platforms import Platform
+# logging imports
+import logging
 
-class Parallels(Platform):
+class Credential():
 	""" 
-		A <Platform> object for Parallels.
+		Class to match the credentials needed by a platform.
 	"""
-	def __init__(self):
+	def __init__(self, user, password):
 		""" 
-			Constructor... 
+			Creation of the credentials.
 		"""
-		self.platformName = "Parallels"
-		# Add the tags for the platform
-		self.tags = ["tools", "e-commerce"]
-		self.NICK_WILDCARD = "<HERE_GOES_THE_NICK>"
-		# Add the URL below
-		self.url = "http://forum.parallels.com/member.php?username=" + self.NICK_WILDCARD
-		# Add the strings to look for when an error appears
-		#self.notFoundText = ["<title>about.me | your personal homepage</title><style>"]
-		self.notFoundText = ["This user has not registered and therefore does not have a profile to view."]
-		self.forbiddenList = ['.']
+		self.user = user
+		self.password = password
