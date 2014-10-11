@@ -10,7 +10,7 @@ platforms when a user profile has not been found as the evidence of the existenc
 of a given profile. Its inheritance system has been designed to allow an easy development 
 of new wrappers while its multiprocessing conception shows the results fastly.
 
-The supported networks in v1.3.0b by 2014-07-26 are:
+Some of the 231 supported networks in v1.3.0 by 2014-10-11 are:
 adtriboo, badoo, bitbucket, bitcointalk, blip, burbuja, 
 care2, couchsurfing, dailymotion, delicious, douban, 
 ebay, elmundo, epinions, facebook, favstar, flickr, 
@@ -21,9 +21,9 @@ instagram, issuu, karmacracy, kickstarter, klout,
 linkedin, marca, mediavida, myspace, occupywallst,
 pastebin, pearltrees, pinterest, pokerstrategy, qq,
 ratemypoo, rebelmouse, reddit, researchgate, scribd,
-slideshare, sourceforge, storify, spoj, theguardian,
-tradimo, tumblr, twicsy, twitpic, twitter, unsystem,
-vk, xing, youtube
+skype, slideshare, sourceforge, storify, spoj, 
+theguardian, tradimo, tumblr, twicsy, twitpic, twitter, 
+unsystem, vk, xing, youtube
 
 License: GPLv3
 ==============

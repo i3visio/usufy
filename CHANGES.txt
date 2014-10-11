@@ -1,6 +1,10 @@
 For more information, check the README.md in http://github.com/i3visio/usufy
 
-v1.3.0, 2014/08/24 -- Release version.
+v1.3.0, 2014/10/10 -- Release version.
+- Minor changes performed on the structure of the modules.
+- Deleted unused files.
+
+v1.3.0b-2, 2014/08/24 -- Beta 2 version.
 - Addition of platforms. Total number, increased to more than 200.
 - The html downloaded receive names depending on the time of the petition.
 - Calculation of MD5 of the downloaded files.
