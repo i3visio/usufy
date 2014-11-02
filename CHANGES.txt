@@ -1,5 +1,10 @@
 For more information, check the README.md in http://github.com/i3visio/usufy
 
+v1.3.1, 2014/11/01 -- Release version.
+- Updated all modules so as to allow being imported by third parties.
+- Changed the name of the main launcher to avoid ambiguity with the package name.
+- Minor change
+
 v1.3.0, 2014/10/10 -- Release version.
 - Minor changes performed on the structure of the modules.
 - Deleted unused files.

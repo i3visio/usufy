@@ -39,16 +39,29 @@ For more details on this issue, run:
 Installation:
 =============
 The installation under Python 2.7 for the release package Usufy-v1.x.x is as follows:
+
+a) If you have git installed, you can install the latest development version  by:
+```
+git clone http://github.com/i3visio/usufy
+cd usufy
+sudo python setup.py build
+sudo python setup.py install	
+```
+b) Downloading the last version from pip:
 ```
 tar xvfz Usufy-v1.x.x.tar.gz
+cd usufy
+sudo python setup.py build
 sudo python setup.py install
 ```
 or
 ```
 unzip Usufy-v1.x.x.zip
+cd usufy
+sudo python setup.py build
 sudo python setup.py install
 ```
-Supeuser privileges are required so as to complete the installation. Afterwards, 
+Superuser privileges are required so as to complete the installation. Afterwards, 
 the module will be importable from any python code. You can check this by typing:
 ```
 python -c "import usufy"
