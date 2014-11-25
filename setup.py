@@ -15,7 +15,7 @@ except ImportError:
 	read_md = lambda f: open(f, 'r').read()
 
 setup(	name="usufy",
-	version="v2.0.0a",
+	version="v2.0.0b",
 	description="usufy - Piece of software to check the existence of a given profile in different platforms developed by i3visio.",
 	author="Felix Brezo and Yaiza Rubio",
 	author_email="contacto@i3visio.com",
@@ -29,6 +29,7 @@ setup(	name="usufy",
  	"i3visiotools",
 	"tkintertable",
 	"Pmw",
+	"entify>=v0.3.0",
 #	"pypandoc",
 	],
 )

@@ -216,7 +216,8 @@ def processNickList(nicks, platforms=None, rutaDescarga="./", avoidProcessing=Tr
 			if r != None:
 				profiles.append(r)
 
-		res = profiles
+		res[nick] = profiles
+		#res = profiles
 	return res
 
 def multi_run_wrapper(args):
@@ -314,7 +315,11 @@ For details, run:
 			nicks = []
 			logger.debug("Recovering nicknames to be processed...")
 			if args.nicks:
-				nicks = args.nicks
+				for n in args.nicks:
+					# TO-DO
+					# 	A trick to avoid having the processing of the properties when being queried by Maltego
+					if "properties.i3visio" not in n:
+						nicks.append(n)
 			else:
 				# Reading the nick files
 				try:
@@ -357,99 +362,110 @@ For details, run:
 					logger.warning("The output folder \'" + args.output_folder + "\' does not exist. The system will try to create it.")
 					os.makedirs(args.output_folder)
 				# Launching the process...
-				res = processNickList(nicks, listPlatforms, args.output_folder, avoidProcessing = args.avoid_processing, avoidDownload = args.avoid_download, nThreads=args.threads, maltego=args.maltego, verbosity= args.verbose, logFolder=args.logfolder)
+				res = processNickList(nicks, listPlatforms, args.output_folder, avoidProcessing = args.avoid_processing, avoidDownload = args.avoid_download, nThreads=args.threads, verbosity= args.verbose, logFolder=args.logfolder)
 			else:
-				res = processNickList(nicks, listPlatforms, nThreads=args.threads, maltego=args.maltego, verbosity= args.verbose, logFolder=args.logfolder)
+				res = processNickList(nicks, listPlatforms, nThreads=args.threads, verbosity= args.verbose, logFolder=args.logfolder)
 				
 			
 			logger.info("Listing the results obtained...")
 			# We are going to iterate over the results...
 			strResults = "\t"
-			for r in res:
-				# The format of the results for a given nick is a list as follows:
-				"""
-				[
-				  {
-					"attributes": [
+			for nick in res.keys():
+				"""{"<a_nick>": [<_the_results_that_follow>]}"""
+				for r in res[nick]:
+					# The format of the results for a given nick is a list as follows:
+					"""
+					[
 					  {
 						"attributes": [
 						  {
-							"attributes": [],
-							"type": "i3visio.platform",
-							"value": "Twitpic"
+							"attributes": [
+							  {
+								"attributes": [],
+								"type": "i3visio.platform",
+								"value": "Twitpic"
+							  }
+							],
+							"type": "i3visio.url",
+							"value": "http://www.twitpic.com/photos/febrezo"
 						  }
 						],
-						"type": "i3visio.url",
-						"value": "http://www.twitpic.com/photos/febrezo"
-					  }
-					],
-					"type": "i3visio.alias",
-					"value": "febrezo"
-				  },
-				  {
-					"attributes": [
+						"type": "i3visio.alias",
+						"value": "febrezo"
+					  },
 					  {
 						"attributes": [
 						  {
-							"attributes": [],
-							"type": "i3visio.platform",
-							"value": "Twitter"
+							"attributes": [
+							  {
+								"attributes": [],
+								"type": "i3visio.platform",
+								"value": "Twitter"
+							  }
+							],
+							"type": "i3visio.url",
+							"value": "http://twitter.com/febrezo"
 						  }
 						],
-						"type": "i3visio.url",
-						"value": "http://twitter.com/febrezo"
+						"type": "i3visio.alias",
+						"value": "febrezo"
 					  }
-					],
-					"type": "i3visio.alias",
-					"value": "febrezo"
-				  }
-				]					
-				"""
-				#print general.dictToJson(res[nick])
+					]					
+					"""
+					#print general.dictToJson(res[nick])
 
-				nick = r["value"]
+					nick = r["value"]
 					
-				results = "Results for '" + nick + "':\n"
-				for profile in r["attributes"]:
-					# recovering the url
-					url = profile["value"]
-					# iterating through the attributes
-					for details in profile["attributes"]:
-						if details["type"] == "i3visio.platform":
-							platform = details["value"]
-					strResults+= (str(platform) + ":").ljust(16, ' ')+ " "+ str(url)+"\n\t\t"
+					results = "Results for '" + nick + "':\n"
+					for profile in r["attributes"]:
+						# recovering the url
+						url = profile["value"]
+						# iterating through the attributes
+						for details in profile["attributes"]:
+							if details["type"] == "i3visio.platform":
+								platform = details["value"]
+						strResults+= (str(platform) + ":").ljust(16, ' ')+ " "+ str(url)+"\n\t\t"
 
-			logger.info(strResults)
+				logger.info(strResults)
 
-			# Generating summary files for each ...
-			if args.extension:
-				# Storing the file...
-				logger.info("Creating output files as requested.")
-				if not args.output_folder:
-					args.output_folder = "./"
-				else:
-					# Verifying if the outputPath exists
-					if not os.path.exists (args.output_folder):
-						logger.warning("The output folder \'" + args.output_folder + "\' does not exist. The system will try to create it.")
-						os.makedirs(args.output_folder)
+				# Generating summary files for each ...
+				if args.extension:
+					# Storing the file...
+					logger.info("Creating output files as requested.")
+					if not args.output_folder:
+						args.output_folder = "./"
+					else:
+						# Verifying if the outputPath exists
+						if not os.path.exists (args.output_folder):
+							logger.warning("The output folder \'" + args.output_folder + "\' does not exist. The system will try to create it.")
+							os.makedirs(args.output_folder)
 
-				strTime = general.getCurrentStrDatetime()
+					strTime = general.getCurrentStrDatetime()
 				
-				"""if  "csv" in args.extension:
-					logger.info("Writing results to csv file.")
-					with open (os.path.join(args.output_folder, "results_" + strTime +".csv"), "w") as oF:
-						oF.write( export_mod.resultsToCSV(res) + "\n" )"""
-				if  "json" in args.extension:
-					logger.info("Writing results to json file.")
-					with open (os.path.join(args.output_folder, "results_" + strTime + ".json"), "w") as oF:
-						oF.write( general.dictToJson(res) + "\n")	
-				if  "maltego" in args.extension:
-					logger.info("Writing results to maltego file.")
-					with open (os.path.join(args.output_folder, "results_" + strTime + ".maltego"), "w") as oF:
-						for element in res:
-							# recovering the profiles for a given element
-							profiles = element["attributes"]
+					"""if  "csv" in args.extension:
+						logger.info("Writing results to csv file.")
+						with open (os.path.join(args.output_folder, "results_" + strTime +".csv"), "w") as oF:
+							oF.write( export_mod.resultsToCSV(res) + "\n" )"""
+					if  "json" in args.extension:
+						logger.info("Writing results to json file.")
+						with open (os.path.join(args.output_folder, "results_" + nick+ "_" + strTime + ".json"), "w") as oF:
+							oF.write( general.dictToJson(res) + "\n")	
+					if  "maltego" in args.extension:
+						logger.info("Writing results to maltego file.")
+						with open (os.path.join(args.output_folder, "results_" + nick+ "_" + strTime + ".maltego"), "w") as oF:
+							profiles = []
+							for element in res[nick]:
+								# recovering the profiles 
+								profiles+=element["attributes"]
+							
 							oF.write( general.listToMaltego(profiles) + "\n")	
-
+	
+				if args.maltego:
+					profiles = []
+					for element in res[nick]:
+						# recovering the profiles 
+						profiles+=element["attributes"]
+					general.listToMaltego(profiles)
+			# here goes the printing the results
 			return res
 

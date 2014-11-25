@@ -1,5 +1,0 @@
-# This is a comment. Note that the fields are separated by a tab "\t".
-#Rename this file to creds.txt for standard behaviour. Otherwise, you can also invoke this file manually every time you run this program.
-#<platform>	<username>	<password>
-demo1	user1	password1
-demo2	user2	password2

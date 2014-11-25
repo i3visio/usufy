@@ -43,8 +43,9 @@ def getPlatforms(sites=["all"], tags=[], fileCreds="./creds.txt"):
 	# Mode will let the i3visiotools module know which kind of platforms we want
 	listAllUsufy = platforms.getAllPlatformsByMode(mode="usufy")
 	
-	logger.info("Recovering all the credentials stored in " + fileCreds)	
-	creds = credentials.getCredentials(fileCreds)
+	logger.info("Recovering all the credentials stored in the i3visiotools.config_credentials.py file.")	
+	#creds = credentials.getCredentials(fileCreds)
+	creds = credentials.getCredentials()
 
 	for p in listAllUsufy:
 		# Verify if there are credentials to be loaded
