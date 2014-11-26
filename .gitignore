@@ -1,0 +1,12 @@
+results*
+contrib*
+logs*
+*pyc
+*~
+creds*
+build*
+dist*
+usufy*
+_lab*
+_new*
+user-collector*
