@@ -75,4 +75,3 @@ def getPlatforms(sites=["all"], tags=[], fileCreds="./creds.txt"):
 						break						
 		return listSelected
 
-

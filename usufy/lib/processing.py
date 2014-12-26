@@ -33,7 +33,6 @@ import i3visiotools.logger
 import usufy.lib.config_usufy as config
 #import lib.attributes as attributes
 import i3visiotools.benchmark as benchmark
-import i3visiotools.export as export_mod
 import i3visiotools.browser as browser
 import i3visiotools.general as general
 
