@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # -*- coding: cp1252 -*-
 #
 ##################################################################################
@@ -74,5 +75,4 @@ def getPlatforms(sites=["all"], tags=[], fileCreds="./creds.txt"):
 						added = True
 						break						
 		return listSelected
-
 

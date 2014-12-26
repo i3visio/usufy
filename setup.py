@@ -26,10 +26,17 @@ setup(	name="usufy",
 	long_description=read_md("README.md"),
 #	long_description=open('README.md').read(),
 	install_requires=[
+<<<<<<< HEAD
  	"i3visiotools >= 0.2.2",
 	"tkintertable",
 	"Pmw",
 	"entify >= 0.4.0",
+=======
+ 	"i3visiotools",
+	"tkintertable",
+	"Pmw",
+	"entify>=v0.3.0",
+>>>>>>> a5ee0dfd1b5344be49d1cfadc43d3ae7a7a78754
 #	"pypandoc",
 	],
 )
