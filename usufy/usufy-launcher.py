@@ -27,8 +27,8 @@ For details, run:
 __author__ = "Felix Brezo, Yaiza Rubio "
 __copyright__ = "Copyright 2014, i3visio"
 __credits__ = ["Felix Brezo", "Yaiza Rubio"]
-__license__ = "GPLv3"
-__version__ = "v2.0.0a"
+__license__ = "GPLv3+"
+__version__ = "v2.0.1"
 __maintainer__ = "Felix Brezo, Yaiza Rubio"
 __email__ = "contacto@i3visio.com"
 
@@ -49,10 +49,9 @@ if __name__ == "__main__":
 	general = parser.add_mutually_exclusive_group(required=True)
 	# Adding the main options
 	general.add_argument('--info', metavar='<action>', choices=['list_platforms', 'list_tags'], action='store', help='select the action to be performed amongst the following: list_platforms (list the details of the selected platforms), list_tags (list the tags of the selected platforms). Afterwards, it exists.')
-	general.add_argument('--license', required=False, action='store_true', default=False, help='shows the GPLv3 license and exists.')	
+	general.add_argument('--license', required=False, action='store_true', default=False, help='shows the GPLv3+ license and exists.')	
 	general.add_argument('-b', '--benchmark',  action='store_true', default=False, help='perform the benchmarking tasks.')
 	general.add_argument('-f', '--fuzz', metavar='<path_to_fuzzing_list>', action='store', type=argparse.FileType('r'), help='this option will try to find usufy-like URLs. The list of fuzzing platforms in the file should be (one per line): <BASE_URL>\t<VALID_NICK>')
-	general.add_argument('-g', '--gui',  action='store_true', default=False, help='order to launch the GUI.')
 	general.add_argument('-l', '--list',  metavar='<path_to_nick_list>', action='store', type=argparse.FileType('r'), help='path to the file where the list of nicks to verify is stored (one per line).')
 	general.add_argument('-n', '--nicks', metavar='<nick>', nargs='+', action='store', help = 'the list of nicks to process (at least one is required).')
 
@@ -82,7 +81,7 @@ if __name__ == "__main__":
 	groupAbout = parser.add_argument_group('About arguments', 'Showing additional information about this program.')
 	groupAbout.add_argument('-h', '--help', action='help', help='shows this help and exists.')
 	groupAbout.add_argument('-v', '--verbose', metavar='<verbosity>', choices=[0, 1, 2], required=False, action='store', default=1, help='select the verbosity level: 0 - none; 1 - normal (default); 2 - debug.', type=int)
-	groupAbout.add_argument('--version', action='version', version='%(prog)s v2.0.0a', help='shows the version of the program and exists.')
+	groupAbout.add_argument('--version', action='version', version='%(prog)s v2.0.1', help='shows the version of the program and exists.')
 
 	args = parser.parse_args()	
 

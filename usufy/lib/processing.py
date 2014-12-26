@@ -34,7 +34,6 @@ import usufy.lib.config_usufy as config
 #import lib.attributes as attributes
 import i3visiotools.benchmark as benchmark
 import i3visiotools.export as export_mod
-#import g_usufy as usufygui 
 import i3visiotools.browser as browser
 import i3visiotools.general as general
 
@@ -294,10 +293,6 @@ For details, run:
 			else:
 				pass
 				
-		# launching the GUI
-		elif args.gui:
-			logger.info("Launching GUI...")
-			usufygui.UsufyGUI()
 		# performing the test
 		elif args.benchmark:
 			logger.warning("The benchmark mode may last some minutes as it will be performing similar queries to the ones performed by the program in production. ")

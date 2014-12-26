@@ -1,5 +1,9 @@
 For more information, check the README.md in http://github.com/i3visio/usufy
 
+v2.0.1, 2014/12/26 -- Updates on README.
+- Minor updates on the README files to fit the installation instructions.
+- Removed the GUI references from the package.
+
 v2.0.0b, 2014/11/02 -- Release version.
 - Inclusion of the extraction of regular expressions by default.
 - Major change performed in the structure of the platform: wrappers, export and logging modules were moved to i3visiotools package.
